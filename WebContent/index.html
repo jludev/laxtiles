@@ -19,7 +19,8 @@
 		<link href="css/font-awesome.min.css" rel="stylesheet">
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
 		<link rel="image_src" href="thumbnail.png">
-		<link rel="icon" type="image/ico" href="favicon.ico">
+		<!-- <link rel="icon" type="image/ico" href="favicon.ico">
+		 -->
 		<!-- END parallax template header content -->
 		
 		<!-- BEGIN NAH header content -->
@@ -33,18 +34,66 @@
 				color: #4d90fe !important; /* overriding identical selector in style.css *//
 			}
 			
-			#intro-slide-strength-in-heart {
-				background-image: url(image/nah/heart.jpg); 
-				background-size: auto 100%; 
-				background-position: center center;
-				background-repeat:no-repeat;
+			/* overriding carousel captions */
+			.carousel-caption {
+			  position: absolute;
+			  right: 0;
+			  /*bottom: 0;*/
+			  left: 0;
+			  top: 33%;
+			  padding: 15px;
+			  /* background: #333333; */
+			  /* background: rgba(0, 0, 0, 0.75); */
+			  background:none !important;
 			}
 			
+			.carousel-caption h4{
+				font-size: 56px;
+				text-align: center;
+				font-weight: 600;
+				color: #bbbdc0;
+				letter-spacing: -7px;
+				line-height: 1;
+				text-transform: none;
+			}
+			
+			.carousel-caption h4 {
+				margin: 0 0 5px;
+			}
+
+
+			@media (max-width: 979px) {
+				.carousel-caption {
+					 top: 15%;
+				}
+				.carousel-caption h4 {
+					font-size: 42px;
+					/*color: #bbbdc0;*/
+					letter-spacing: -5px;
+					/*padding-top: 25%;*/
+				}
+			}
+				
+						
 		</style>
+		
 		<!-- END NAH header content -->
 		
 	</head>
 	<body data-spy="scroll" data-target=".navbar" data-offset='64' onLoad="$.stellar();">
+	
+		<div id="fb-root"></div>
+				<!-- Facebook -->
+		<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "http://connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+		
+		
+			
 		<div id="preloader">
 			<div id="status">&nbsp;</div>
 		</div>
@@ -199,7 +248,7 @@
 								
 								<div class="thumbnail">
 									<h3>Charity Miles</h3>
-									<img src="img/nah/charity-miles.png" alt="">
+									<img src="img/nah/charity-miles.png" alt="" class="img-polaroid">
 									<span>for mobile devices</span>
 									<p></p>
 									<!-- 
@@ -261,17 +310,23 @@
 				
 				
 				<div class="divider"></div>
+				<!-- 
 				<div class="row divide">
 					<div class="span12">
 						<div id="carousel_vertical_slide" class="carousel slide horizontal">
 							<div class="carousel-inner">
 								<div class="active item">
 									<img src="img/works/works_1.jpg" alt="">
+									<div class="carousel-caption">
+										<h4>blah</h4>
+										<p>pblah</p>
+									</div>
 								</div>
 								<div class="inactive item">
 									<img src="img/works/works_2.jpg" alt="">
 								</div>
 							</div>
+							
 							<button class="carousel-control left m-btn icn-only" href="#carousel_vertical_slide" data-slide="prev"><i class="icon-chevron-left"></i></button>
 							<button class="carousel-control right m-btn icn-only" href="#carousel_vertical_slide" data-slide="next"><i class="icon-chevron-right"></i></button>
 						</div>
@@ -373,6 +428,7 @@
 						</div>
 					</div>
 				</div>
+				-->
 			</div>
 		</section>
 		<section id="hint2">
@@ -524,6 +580,7 @@
 		<div id="gallery_6" class="lightbox hide fade" tabindex="-1" role="dialog" aria-hidden="true">
 			<div class='lightbox-content'>
 				<img src="img/gallery/gallery_6@2x.jpg" alt="">
+				<div class="lightbox-caption"><p>Your caption here</p></div>
 			</div>
 		</div>
 		<div id="gallery_7" class="lightbox hide fade" tabindex="-1" role="dialog" aria-hidden="true">
@@ -579,6 +636,220 @@
 			<div class="container">
 				<div class="divider"></div>
 				<div class="row divide">
+					<div class="span8 offset2">
+						<h1>We are Awerest</h1>
+						<p class="center">Aoccdrnig to a rscheearch at Cmabrigde Uinervtisy, it deosn't mttaer in waht oredr the ltteers in a wrod are, 
+						the olny iprmoetnt tihng is taht the frist and lsat ltteer be at the rghit pclae.
+						The rset can be a toatl mses and you can sitll raed it wouthit porbelm. 
+						Tihs is bcuseae the huamn mnid deos not raed ervey lteter by istlef, but the wrod as a wlohe. Awesomeness, true story!</p>
+					</div>
+					<div class="span12">
+						<ul class="thumbnails">
+							<li class="span6">
+								<div id="carousel_hunger" class="carousel slide carousel-fade">
+									<div class="carousel-inner">
+										
+										<div class="active item thumbnail" data-thumb="tooltip" title="Share this" data-placement="top">
+											<a href="#cause_hunger" data-toggle="lightbox">
+												<img src="img/nah/cause-background-600x450.png">
+												<div class="carousel-caption">
+													<h4>#Hunger</h4>
+												</div>
+											</a>
+										</div>
+										<div class="inactive item thumbnail" data-thumb="tooltip" title="Share this" data-placement="top">
+											<a href="#cause_hunger" data-toggle="lightbox">
+												<img src="img/nah/cause-childhunger.jpg">
+											</a>
+										</div>
+										<div class="inactive item thumbnail" data-thumb="tooltip" title="Share this" data-placement="top">
+											<a href="#cause_hunger" data-toggle="lightbox">
+												<img src="img/nah/cause-background-600x450.png">
+												<div class="carousel-caption">
+													<h4>#EndHungerNow</h4>
+												</div>
+											</a>
+										</div>
+										<div class="inactive item thumbnail" data-thumb="tooltip" title="Share this" data-placement="top">
+											<a href="#cause_hunger" data-toggle="lightbox">
+												<img src="img/nah/cause-background-600x450.png">
+												<div class="carousel-caption">
+													<h4>#ChildHunger</h4>
+												</div>
+											</a>
+										</div>
+										<div class="inactive item thumbnail" data-thumb="tooltip" title="Share this" data-placement="top">
+											<a href="#cause_hunger" data-toggle="lightbox">
+												<img src="img/nah/cause-background-600x450.png">
+												<div class="carousel-caption">
+													<h4>#SolveHunger</h4>
+												</div>
+											</a>
+										</div>
+										
+									</div>
+								</div>
+							</li>
+							<li class="span6">
+								<div id="carousel_autism" class="carousel slide carousel-fade">
+									<div class="carousel-inner">
+										<div class="active item thumbnail" data-thumb="tooltip" title="Share this" data-placement="top">
+											<img src="img/nah/cause-background-600x450.png">
+											<div class="carousel-caption">
+												<h4>#Autism</h4>
+											</div>
+										</div>
+										<div class="inactive item thumbnail" data-thumb="tooltip" title="Share this" data-placement="top">
+											<img src="img/nah/cause-background-600x450.png">
+											<div class="carousel-caption">
+												<h4>#HackingAutism</h4>
+											</div>
+										</div>
+										<div class="inactive item thumbnail" data-thumb="tooltip" title="Share this" data-placement="top">
+											<img src="img/nah/cause-background-600x450.png">
+											<div class="carousel-caption">
+												<h4>#LightUpTheBlues</h4>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="span6">
+								<div id="carousel_troops" class="carousel slide carousel-fade">
+									<div class="carousel-inner">
+										<div class="active item thumbnail" data-thumb="tooltip" title="Share this" data-placement="top">
+											<img src="img/nah/cause-background-600x450.png">
+											<div class="carousel-caption">
+												<h4>#SupportOurTroops</h4>
+											</div>
+										</div>
+										<div class="inactive item thumbnail" data-thumb="tooltip" title="Share this" data-placement="top">
+											<a href="#cause_troops" data-toggle="lightbox">
+												<img src="img/nah/cause-troops.jpg">
+											</a>
+										</div>										
+										<div class="inactive item thumbnail" data-thumb="tooltip" title="Share this" data-placement="top">
+											<img src="img/nah/cause-background-600x450.png">
+											<div class="carousel-caption">
+												<h4>#Veterans</h4>
+											</div>
+										</div>
+										<div class="inactive item thumbnail" data-thumb="tooltip" title="Share this" data-placement="top">
+											<a href="#cause_troops" data-toggle="lightbox">
+												<img src="img/nah/cause-troops-homecoming.jpg">
+											</a>
+										</div>
+										
+										<div class="inactive item thumbnail" data-thumb="tooltip" title="Share this" data-placement="top">
+											<img src="img/nah/cause-background-600x450.png">
+											<div class="carousel-caption">
+												<h4>#PTSD</h4>
+											</div>
+										</div>
+										<div class="inactive item thumbnail" data-thumb="tooltip" title="Share this" data-placement="top">
+											<img src="img/nah/cause-background-600x450.png">
+											<div class="carousel-caption">
+												<h4>#Suicide</h4>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="span6">
+								<div id="carousel_cancer" class="carousel slide carousel-fade">
+									<div class="carousel-inner">
+										<div class="active item thumbnail" data-thumb="tooltip" title="Share this" data-placement="top">
+											<img src="img/nah/cause-background-600x450.png">
+											<div class="carousel-caption">
+												<h4>#Cancer</h4>
+											</div>
+										</div>
+										<div class="inactive item thumbnail" data-thumb="tooltip" title="Share this" data-placement="top">
+											<img src="img/nah/cause-background-600x450.png">
+											<div class="carousel-caption">
+												<h4>#ChildhoodCancer</h4>
+											</div>
+										</div>
+										<div class="inactive item thumbnail" data-thumb="tooltip" title="Share this" data-placement="top">
+											<img src="img/nah/cause-background-600x450.png">
+											<div class="carousel-caption">
+												<h4>#HopeForKids</h4>
+											</div>
+										</div>
+										<div class="inactive item thumbnail" data-thumb="tooltip" title="Share this" data-placement="top">
+											<img src="img/nah/cause-background-600x450.png">
+											<div class="carousel-caption">
+												<h4>#Survivor</h4>
+											</div>
+										</div>
+										<div class="inactive item thumbnail" data-thumb="tooltip" title="Share this" data-placement="top">
+											<img src="img/nah/cause-background-600x450.png">
+											<div class="carousel-caption">
+												<h4>#CancerPrevention</h4>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="span6">
+								<div id="carousel_hiv" class="carousel slide carousel-fade">
+									<div class="carousel-inner">
+										<div class="active item thumbnail" data-thumb="tooltip" title="Share this" data-placement="top">
+											<img src="img/nah/cause-background-600x450.png">
+											<div class="carousel-caption">
+												<h4>#HIV</h4>
+											</div>
+										</div>
+										<div class="inactive item thumbnail" data-thumb="tooltip" title="Share this" data-placement="top">
+											<img src="img/nah/cause-background-600x450.png">
+											<div class="carousel-caption">
+												<h4>#TheBigPush</h4>
+											</div>
+										</div>
+										<div class="inactive item thumbnail" data-thumb="tooltip" title="Share this" data-placement="top">
+											<img src="img/nah/cause-background-600x450.png">
+											<div class="carousel-caption">
+												<h4>#Aids</h4>
+											</div>
+										</div>
+										<div class="inactive item thumbnail" data-thumb="tooltip" title="Share this" data-placement="top">
+											<img src="img/nah/cause-background-600x450.png">
+											<div class="carousel-caption">
+												<h4>#JoinRed</h4>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="span6">
+								<div id="carousel_animal_cruelty" class="carousel slide carousel-fade">
+									<div class="carousel-inner">
+										<div class="active item thumbnail" data-thumb="tooltip" title="Share this" data-placement="top">
+											<img src="img/nah/cause-background-600x450.png">
+											<div class="carousel-caption">
+												<h4>#AnimalCruelty</h4>
+											</div>
+										</div>
+										<div class="inactive item thumbnail" data-thumb="tooltip" title="Share this" data-placement="top">
+											<img src="img/nah/cause-background-600x450.png">
+											<div class="carousel-caption">
+												<h4>#AdoptASPCA</h4>
+											</div>
+										</div>
+										<div class="inactive item thumbnail" data-thumb="tooltip" title="Share this" data-placement="top">
+											<img src="img/nah/cause-background-600x450.png">
+											<div class="carousel-caption">
+												<h4>#GoOrange</h4>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+						
+						</ul>
+					</div>
+				</div>
+				<div class="row divide">
 					<div class="span12">
 					</div>
 					<div class="span7">
@@ -612,6 +883,29 @@
 				</div>
 			</div>
 		</section>
+		
+		<!-- Causes Lightbox Content -->
+		<div id="cause_hunger" class="lightbox hide fade"  tabindex="-1" role="dialog" aria-hidden="false">
+			<div class='lightbox-content'>
+				<img src="img/nah/cause-lightbox-dog-leash.jpg" alt="">
+				<div class="lightbox-caption">
+					<h3>How can you help end #hunger?</h3>
+					<p>By taking this guy for a walk.</p>
+					<p>
+							<a href="https://twitter.com/share" class="twitter-share-button" data-lang="en" counturl="http://www.strengthinheart.com/twitterShared" data-size="large" data-related="charitymiles:Turn Exercise into Charitable Dollars" data-text="Get healthier and help end hunger through the @CharityMiles app. #EveryMileMatters ">Tweet</a>
+							<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+							&nbsp&nbsp
+							<iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fnumbersandheart.com&amp;send=false&amp;layout=standard&amp;width=450&amp;show_faces=false&amp;font=trebuchet+ms&amp;colorscheme=light&amp;action=like&amp;height=35" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:450px; height:35px;" allowTransparency="true"></iframe>
+							&nbsp&nbsp
+							<i class="icon-google-plus"></i>&nbsp&nbsp
+							<i class="icon-pinterest"></i>
+					</p>
+					
+				</div>
+				
+			</div>
+		</div>
+		
 	<!--start contact header-->
 		<section id="contact-top">
 	<!--start contact-desktop header-->
